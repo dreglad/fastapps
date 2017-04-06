@@ -1,0 +1,9 @@
+# Usa el vocabulario: https://schema.org/MobileApplication
+name: teleSUR
+description: Aplicación móvil de teleSUR, Nuestro Norte es el Sur.
+applicationCategory: News
+potentialActions:
+  - Home
+  - Noticias
+  - Videos
+

@@ -1,0 +1,14 @@
+---
+- hosts: default
+
+  roles:
+  - williamyeh.oracle-java
+  - geerlingguy.solr
+  #- tomcat
+
+  
+  # tasks:
+  #   - name: Copy modules
+  #     copy: src=modules/ dst=/var/lib/OpenMRS/modules owner=tomcat7 group=tomcat7
+
+

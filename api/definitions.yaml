@@ -1,0 +1,93 @@
+
+# https://schema.org/Thing
+Thing:
+  type: object
+  properties:
+    url:
+      type: string
+    name:
+      type: string
+    description:
+      type: string
+    creationDate:
+      type: string
+    publicationDate:
+      type: string
+    modificationDate:
+      type: string
+    keywords:
+      type: array
+      items:
+        $ref: '#/definitions/Thing'
+
+# https://schema.org/Person
+Person:
+  allOf:
+    - $ref: '#/definitions/Thing'
+    - properties:
+        givenName:
+          type: string
+        additionalName:
+          type: string
+        familyName:
+          type: string
+
+# https://schema.org/CreativeWork
+CreativeWork:
+  allOf:
+    - $ref: '#/definitions/Thing'
+    - properties:
+        author:
+          $ref: "#/definitions/Person"
+
+# https://schema.org/VideoObject
+VideoObject:
+  allOf:
+    - $ref: '#/definitions/CreativeWork'
+    - properties:
+        videoQuality:
+          type: string
+        caption:
+          type: string
+
+# https://schema.org/Article
+Article:
+  allOf:
+    - $ref: '#/definitions/CreativeWork'
+    - properties:
+        headline:
+          type: string
+        articleSection:
+          type: string
+        articleBody:
+          type: string
+        wordCount:
+          type: integer
+
+# https://schema.org/NewsArticle
+NewsArticle:
+  allOf:
+    - $ref: '#/definitions/CreativeWork'
+    - properties:
+        printEdition:
+          type: string
+        printPage:
+          type: string
+
+# https://schema.org/ListItem
+ListItem:
+  allOf:
+    - $ref: '#/definitions/Thing'
+    - properties:
+        position:
+          type: integer
+
+# https://schema.org/ItemList
+ItemList:
+  allOf:
+    - $ref: '#/definitions/Thing'
+    - properties:
+        items:
+          type: array
+          items:
+            $ref: '#/definitions/ListItem'

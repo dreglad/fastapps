@@ -1,0 +1,46 @@
+
+nombre: Ciencia Salud
+descripción: Aplicación móvil Ciencia Salud
+categoría: Salud
+
+icono: icon.jpg
+splash: splash.png
+
+datos:
+  secicones: https://datos/cienciaslud/secciones
+  noticias: https://datos/cienciaslud/noticias
+
+vistas:
+  - nombre: Home
+    tipo: ItemList
+    datos: noticias
+
+
+publicidad:
+   - 
+
+analytics:
+  google: 
+  comscore: 
+
+  - Nutrición
+  - Salud Reproductiva
+  - Opinión
+  - Historia
+  - Ciencia
+
+vistas:
+  ItemList:
+    name: Home
+    type: List
+
+  - Noticias
+  - Videos
+  noticias:
+    name: Noticias
+
+  video:
+    name: Video
+
+
+https://support.google.com/webmasters/answer/2692911?hl=en

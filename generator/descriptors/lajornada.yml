@@ -1,0 +1,75 @@
+# Usa el vocabulario: https://schema.org/MobileApplication
+name: La Jornada
+description: Aplicación móvil de teleSUR, Nuestro Norte es el Sur.
+language: es
+category: News
+views:
+  portada:
+    type: List
+    data: portada
+
+      options:
+        pagination: cursor
+
+  - label: En vivo
+    type: List
+    pagination: cursor
+
+
+types:
+  ObjectList:
+
+
+Componentes iniciales
+
+Vistas
+  Las vistas son identificadas con:
+    - Tipo de información que manejan
+    - Plataforma
+    - Cliente/App
+
+  Ejemplos vistas:
+
+    - Listado (https://schema.org/ItemList)
+    - Noticia ((https://schema.org/NewsArticle)
+    - 
+
+Temas
+  Los temas se identifican con:
+    - Vista que decoran
+    - Plataforma
+    - Cliente/App
+
+  - Listado (https://schema.org/ItemList)
+  - Noticia
+
+
+
+Temas
+
+(Re)Acciones
+
+Adaptadores
+
+Vistas
+
+Temas
+
+Acciones
+
+Componentes:
+
+  - Aplicación Cliente:
+    - Vistas
+    - Acciones
+    - Temas
+  
+  - Servicio de datos
+    - Adaptadores genéricos para fuentes de datos comunes (RSS, Atom, Site Maps, Twitter, YouTube, etc.)
+    - Adaptadores 
+
+
+  -
+  - Datos
+
+  - 

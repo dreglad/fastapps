@@ -1,0 +1,37 @@
+---
+swagger: '2.0'
+info:
+  version: 0.0.0
+  title: FastApps Data API
+paths:
+  /navigation:
+    get:
+      summary: Gets list of SiteNavigationElement 
+      responses:
+        200:
+         description: OK
+  /config:
+    get:
+      summary: Gets runtime configuration as a list of PropertyValues
+      responses:
+        200:
+          description: OK
+    put:
+      summary: Change some configuration PropertyValues for this device 
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        "405":
+          description: Validation exception
+        "404":
+          description: ProperyValue not found
+        "400":
+          description: Invalid request
+  
+# Ontologies
+definitions:
+  $ref: definitions.yaml
