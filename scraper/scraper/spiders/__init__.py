@@ -4,10 +4,10 @@ Master Spider
 """
 from urlparse import urlparse
 
-from scrapy.spiders import CrawlSpider
+from scrapy.spiders import BaseSpider
 
 
-class FastAppsCrawlSpider(CrawlSpider):
+class FastAppsSpider(BaseSpider):
     """
     This spider will try to crawl whatever is passed in `start_urls` which
     should be a comma-separated string of fully qualified URIs.
@@ -15,7 +15,7 @@ class FastAppsCrawlSpider(CrawlSpider):
     Example: start_urls=http://localhost,http://example.com
     """
     def __init__(self, *args, **kwargs):
-        super(FastAppsCrawlSpider, self).__init__(*args, **kwargs)
+        super(FastAppsSpider, self).__init__(*args, **kwargs)
         self.logger.debug("FastAppsCrawlSpider __init__")
         if 'start_urls' in kwargs:
             self.start_urls = kwargs.pop('start_urls').split(',')

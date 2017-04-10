@@ -6,10 +6,10 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
 from scraper.items import NewsArticleItem
-from scraper.spiders import FastAppsCrawlSpider
+from scraper.spiders import FastAppsSpider
 
 
-class CienciaSaludSpider(FastAppsCrawlSpider):
+class CienciaSaludSpider(FastAppsSpider, CrawlSpider):
     name = "cienciasalud"
     allowed_domains = ["www.cienciasalud.com.mx"]
     start_urls = ['http://www.cienciasalud.com.mx/']

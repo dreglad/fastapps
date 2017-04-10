@@ -23,5 +23,5 @@ class MongoDBPipeline(object):
             raise DropItem("Object Without identifier {0}!".format(item))
     
         self.collection.update({'url': item['url']}, dict(item), upsert=True)
-        logging.debug("Object added to database")
+        logging.info("Object added to database")
         return item

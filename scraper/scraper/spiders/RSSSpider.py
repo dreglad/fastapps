@@ -3,7 +3,7 @@
 Microdata Spider
 """
 from scrapy import Request
-from scrapy.spiders import CrawlSpider, Rule
+from scrapy.spiders import Rule, XMLFeedSpider
 from scrapy.linkextractors import LinkExtractor
 from extruct.w3cmicrodata import MicrodataExtractor
 from extruct.jsonld import JsonLdExtractor
@@ -11,11 +11,11 @@ from extruct.jsonld import JsonLdExtractor
 from scraper.spiders import FastAppsSpider
 
 
-class SchemaSpider(FastAppsSpider, CrawlSpider):
-    name = "schema"
-    rules = (
-        Rule(LinkExtractor(allow=r'.+'), callback='parse_item', follow=True),
-    )
+
+class SchemaSpider(FastAppsSpider, XMLFeedSpider):
+    name = "rss"
+    iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
+    itertag = 'item'
 
     def parse_item(self, response):
         items = []
