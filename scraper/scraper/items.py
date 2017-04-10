@@ -5,9 +5,11 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
+import logging
+
 import scrapy
 
-class Thing(scrappy.Item):
+class Thing(scrapy.Item):
     url = scrapy.Field()
     name = scrapy.Field()
     description = scrapy.Field()
