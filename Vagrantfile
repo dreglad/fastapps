@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
     backend.vm.provision :ansible do |ansible|
       ansible.playbook = "provisioning/backend.yml"
       ansible.galaxy_role_file = "provisioning/requirements.yml"
+      ansible.galaxy_roles_path = "provisioning/galaxy_roles/"
     end
   end
 

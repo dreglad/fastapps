@@ -1,2 +1,5 @@
-- williamyeh.oracle-java
-- geerlingguy.solr
+- name: mongodb
+  src: lesmyrmidons.mongodb
+
+- name: nodejs
+  src: geerlingguy.nodejs
