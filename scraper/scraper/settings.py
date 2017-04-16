@@ -11,7 +11,7 @@
 
 BOT_NAME = 'scraper'
 
-SPIDER_MODULES = ['scraper.spiders']
+SPIDER_MODULES = ['scraper.spiders', 'scraper.spiders.websites']
 NEWSPIDER_MODULE = 'scraper.spiders'
 
 
@@ -65,7 +65,7 @@ DOWNLOAD_DELAY = 0.1
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scraper.pipelines.MongoDBPipeline': 300,
+   'scraper.pipelines.ArangoDBPipeline': 300,
 }
 
 MONGODB_SERVER = "localhost"
