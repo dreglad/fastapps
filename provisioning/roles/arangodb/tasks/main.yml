@@ -1,0 +1,14 @@
+---
+# ArangoDBs role tasks
+
+- name: ArangoDB APT key is present
+  apt_key: url=http://www.arangodb.com/repositories/arangodb31/xUbuntu_16.04/Release.key state=present
+
+- name: ArangoDB APT Repository is present
+  apt_repository: repo='deb http://www.arangodb.org/repositories/arangodb31/xUbuntu_16.04/ /' state=present
+
+- name: APT cache us updated
+  apt: update_cache=yes
+
+- name: ArangoDB is installeed
+  apt: pkg=arangodb3={{ arangodb_version }}

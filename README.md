@@ -24,9 +24,8 @@ Artifacts
 
 Technologies
 
- - Apache Solr
  - scrapy (Python)
- - Celery
+ - ArangoDB
 
 
 ### App Generator ###
@@ -86,8 +85,7 @@ Technologies:
 
  ### General Artifacts ###
 
-Ontology: https://docs.google.com/spreadsheets/d/1AODamYaTgkpskXj36duufoU1csN2TQtDHsw1wZGrEiA/edit?usp=sharing
-
- Application descriptors
----------------
+Ontology:
+ - Schema.org: http://schema.org/
+ - rNews: http://dev.iptc.org/rNews-1-The-NewsItem-Class
 

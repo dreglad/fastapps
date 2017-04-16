@@ -1,0 +1,16 @@
+---
+# Scraper playbook
+
+- name: APT Packages updated
+  apt: update_cache=yes upgrade=dist
+
+- name: Scraper APT dependencies installed
+  apt: name={{item}} state=installed
+  with_items:
+    - build-essential
+    - libssl-dev
+    - python-dev
+    - python-pip
+
+- name: Scraper Python dependencies installed
+  pip: requirements=/vagrant/scraper/requirements.txt

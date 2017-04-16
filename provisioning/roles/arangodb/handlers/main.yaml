@@ -1,0 +1,5 @@
+---
+# ArandoDB role handlers
+
+- name: ArangoDB is restarted
+  service: name=arangodb state=restarted

@@ -1,5 +1,1 @@
-- name: mongodb
-  src: lesmyrmidons.mongodb
-
-- name: nodejs
-  src: geerlingguy.nodejs
+- src: geerlingguy.nodejs

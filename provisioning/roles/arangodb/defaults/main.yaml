@@ -1,0 +1,4 @@
+---
+# ArangoDB default variables
+
+arangodb_version: 3.1.17
